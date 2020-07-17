@@ -1,5 +1,6 @@
 #Vikas Bansal
 #Make a correlation of log2fc for cell lines and human samples from tenover and landthaler paper
+#17 July 2020
 
 set.seed(786)
 setwd("/data/vikas/COV_ace/")
@@ -78,7 +79,7 @@ p.mat <- cor.mtest(NHEB_HCL_COVID_Landthaler[,-1])
 
 col=brewer.pal(n=10, name="RdYlBu")
 
-pdf("PublicData/DEgenesTenOverLandthaler/LandthalertenOverCorFC.pdf", width=20, height=18)
+pdf("PublicData/LandthalertenOverCorFC.pdf", width=20, height=18)
 corrplot(M, method="color", col=col,
           order="hclust",
          addCoef.col = "black", # Add coefficient of correlation
